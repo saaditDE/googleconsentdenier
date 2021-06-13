@@ -1,0 +1,23 @@
+{
+  "description": "Denies Google Consent / Lehnt ab, was Google an Zustimmungen vorschlaegt",
+  "manifest_version": 2,
+  "name": "GoogleConsentDenier",
+  "version": "1.0",
+  "homepage_url": "https://googleconsentdenier",
+  
+  "content_scripts": [
+    {
+      "matches": ["*://*.google.de/*"],
+      "js": ["main.js"]
+    }
+  ],
+ 
+  "permissions": ["storage","activeTab"],
+
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "GoogleConsentDenier@saad-it.de"
+    }
+  }
+
+}
